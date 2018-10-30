@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="adicionar_m_todo_de_pagamento">Adicionar método de pagamento</string>
+    <string name="cod_seguran_a">Cod. segurança</string>
+    <string name="vencimento">Vencimento</string>
+    <string name="n_mero_do_cart_o">Número do cartão</string>
+    <string name="e_mail">E-mail</string>
+    <string name="pontos">•••• •••• ••••</string>
+    <string name="nome_impresso">Nome impresso</string>
+
+</resources>

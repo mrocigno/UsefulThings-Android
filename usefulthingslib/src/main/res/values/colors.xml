@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#003068</color>
+    <color name="colorPrimaryDark">#00234d</color>
+    <color name="colorAccent">#003068</color>
+
+    <color name="login_back">#EFEFEF</color>
+    <color name="blue_facebook">#4267B2</color>
+    <color name="blue_linkedin">#2781BD</color>
+    <color name="gray_border">#353535</color>
+    <color name="black_transparent">#7c000000</color>
+    <color name="lightblue_card">#0095ff</color>
+    <color name="upload_back_color">#9fffffff</color>
+    <color name="parallax_back">#210002</color>
+</resources>
