@@ -39,11 +39,14 @@
 package lib.mrocigno.usefulthings;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import lib.rocigno.photopicker.PhotoPicker;
 import lib.rocigno.usefulthingslib.CustomViews.CustomAlerts.AlertTop;
 import lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout;
 import lib.rocigno.usefulthingslib.CustomViews.Views.Parallax;
@@ -54,6 +57,8 @@ public class Demo extends Parallax {
 
     AutoValidateLinearLayout avllMain_demo;
     Button btnValidar_demo, btnShowSimpleAlertTop_demo, btnShowYesNoAlertTop_demo, btnShowInputAlertTop_demo;
+
+    PhotoPicker pprFotos_demo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +77,7 @@ public class Demo extends Parallax {
         btnShowSimpleAlertTop_demo = findViewById(R.id.btnShowSimpleAlertTop_demo);
         btnShowYesNoAlertTop_demo = findViewById(R.id.btnShowYesNoAlertTop_demo);
         btnShowInputAlertTop_demo = findViewById(R.id.btnShowInputAlertTop_demo);
+        pprFotos_demo = findViewById(R.id.pprFotos_demo);
     }
 
     private void initActions() {
@@ -116,6 +122,12 @@ public class Demo extends Parallax {
                 });
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        pprFotos_demo.result(requestCode,resultCode,data);
     }
 }
 
