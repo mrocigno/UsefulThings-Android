@@ -1,86 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/avllMain_demo"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/parallax_back"
-    android:orientation="vertical"
-    tools:context=".Demo">
+<!--<FrameLayout android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android">-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Biblioteca 'AutoValidade', ela serve para validar os campos marcados como obrigatórios ou com outras condições, por exemplo, comparar com outro campo ou o mínimo de caracteres. Também é possível adicionar mascara a partir do XML "
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
-    <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Obrigatório"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray"
-        android:theme="@style/edtTheme"
-        app:obrigatory_field="true" />
-
-    <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateEditText
+        <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/avllMain_demo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="CPF"
-            android:inputType="number"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/darker_gray"
-            android:theme="@style/edtTheme"
-            app:obrigatory_field="true"
-            app:validate_cpf="true" />
+            android:layout_height="match_parent"
+            android:background="@color/parallax_back"
+            android:orientation="vertical"
+            tools:context=".Demo">
 
-        <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="CEP"
-            android:inputType="number"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/darker_gray"
-            android:theme="@style/edtTheme"
-            app:mask="#####-###"
-            app:obrigatory_field="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Biblioteca 'AutoValidade', ela serve para validar os campos marcados como obrigatórios ou com outras condições, por exemplo, comparar com outro campo ou o mínimo de caracteres. Também é possível adicionar mascara a partir do XML "
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
-    </lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout>
+            <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Obrigatório"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:theme="@style/edtTheme"
+                app:obrigatory_field="true" />
 
-    <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Mascara aleatória"
-        android:inputType="number"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray"
-        android:theme="@style/edtTheme"
-        app:mask="##     ## #     ####"
-        app:obrigatory_field="true" />
+            <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnValidar_demo"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:paddingStart="50dp"
-        android:paddingEnd="50dp"
-        android:text="Validar"
-        android:textColor="@android:color/black" />
+                <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="CPF"
+                    android:inputType="number"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:theme="@style/edtTheme"
+                    app:obrigatory_field="true"
+                    app:validate_cpf="true" />
 
-</lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout>
+                <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="CEP"
+                    android:inputType="number"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:theme="@style/edtTheme"
+                    app:mask="#####-###"
+                    app:obrigatory_field="true" />
+
+            </lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout>
+
+            <lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Mascara aleatória"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:theme="@style/edtTheme"
+                app:mask="##     ## #     ####"
+                app:obrigatory_field="true" />
+
+            <Button
+                android:id="@+id/btnValidar_demo"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="Validar"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Biblioteca ''Custom Alerts''"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnShowSimpleAlertTop_demo"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Alert Top"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/btnShowYesNoAlertTop_demo"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Sim ou Não Alert Top"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/btnShowInputAlertTop_demo"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="input Alert Top"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+        </lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout>
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+<!--</FrameLayout>-->
+

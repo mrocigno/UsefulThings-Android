@@ -75,7 +75,7 @@
                 android:id="@+id/frmContainer_parallax"
                 android:background="@color/parallax_back"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 android:padding="@dimen/layout_padding"
                 android:layout_below="@id/img8">
 

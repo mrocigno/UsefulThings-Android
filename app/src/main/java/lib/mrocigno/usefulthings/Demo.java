@@ -38,22 +38,29 @@
 
 package lib.mrocigno.usefulthings;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import lib.rocigno.usefulthingslib.CustomViews.CustomAlerts.AlertTop;
 import lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout;
 import lib.rocigno.usefulthingslib.CustomViews.Views.Parallax;
 
 public class Demo extends Parallax {
 
+    Activity activity;
+
     AutoValidateLinearLayout avllMain_demo;
-    Button btnValidar_demo;
+    Button btnValidar_demo, btnShowSimpleAlertTop_demo, btnShowYesNoAlertTop_demo, btnShowInputAlertTop_demo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContainerView(R.layout.activity_demo);
+
+        activity = Demo.this;
 
         initVars();
         initActions();
@@ -62,6 +69,9 @@ public class Demo extends Parallax {
     private void initVars() {
         avllMain_demo = findViewById(R.id.avllMain_demo);
         btnValidar_demo = findViewById(R.id.btnValidar_demo);
+        btnShowSimpleAlertTop_demo = findViewById(R.id.btnShowSimpleAlertTop_demo);
+        btnShowYesNoAlertTop_demo = findViewById(R.id.btnShowYesNoAlertTop_demo);
+        btnShowInputAlertTop_demo = findViewById(R.id.btnShowInputAlertTop_demo);
     }
 
     private void initActions() {
@@ -69,6 +79,41 @@ public class Demo extends Parallax {
             @Override
             public void onClick(View v) {
                 avllMain_demo.isValidate();
+            }
+        });
+        btnShowSimpleAlertTop_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertTop.CustomTopSimpleAlert(activity, "Alert top", R.drawable.ic_warning, 4000);
+            }
+        });
+
+        btnShowYesNoAlertTop_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertTop.CustomYesNoTopAlert(activity, "Titulo", "Mensagem", R.drawable.ic_warning, new AlertTop.YesNoCallBack() {
+                    @Override
+                    public void onClickYes() {
+                        Toast.makeText(activity, "Clicou sim", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onClickNo() {
+                        Toast.makeText(activity, "Clicou não", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+        btnShowInputAlertTop_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertTop.CustomInputTopAlert(activity, "Titulo", R.drawable.ic_warning, new AlertTop.InputOk() {
+                    @Override
+                    public void onClickOk(String value) {
+                        Toast.makeText(activity, "Digitou: " + value, Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }
