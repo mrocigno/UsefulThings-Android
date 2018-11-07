@@ -63,14 +63,14 @@ public class ButtonAddPhoto extends Button {
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                (new CustomBottomSheet(activity)).add(R.drawable.ic_add, "Camera", new CustomBottomSheet.onClickAction() {
+                (new CustomBottomSheet(activity)).add(R.drawable.ic_add_foto_camera, "Camera", new CustomBottomSheet.onClickAction() {
                     public void onItemSelected() {
                         if (verifiePermissions(activity)) {
                             ImagesActions.showCamera(activity, result_camera);
                         }
 
                     }
-                }).add(R.drawable.ic_close, "Galeria", new CustomBottomSheet.onClickAction() {
+                }).add(R.drawable.ic_add_foto_galery, "Galeria", new CustomBottomSheet.onClickAction() {
                     public void onItemSelected() {
                         if (verifiePermissions(activity)) {
                             ImagesActions.showGalery(activity, result_galery);
