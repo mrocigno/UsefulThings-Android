@@ -49,6 +49,7 @@ import android.widget.Toast;
 import lib.rocigno.photopicker.PhotoPicker;
 import lib.rocigno.usefulthingslib.CustomViews.CustomAlerts.AlertTop;
 import lib.rocigno.usefulthingslib.CustomViews.Views.AutoValidateLinearLayout;
+import lib.rocigno.usefulthingslib.CustomViews.Views.ButtonAddPhoto;
 import lib.rocigno.usefulthingslib.CustomViews.Views.Parallax;
 
 public class Demo extends Parallax {
@@ -57,6 +58,8 @@ public class Demo extends Parallax {
 
     AutoValidateLinearLayout avllMain_demo;
     Button btnValidar_demo, btnShowSimpleAlertTop_demo, btnShowYesNoAlertTop_demo, btnShowInputAlertTop_demo;
+
+    ButtonAddPhoto addFoto;
 
     PhotoPicker pprFotos_demo;
 
@@ -78,6 +81,7 @@ public class Demo extends Parallax {
         btnShowYesNoAlertTop_demo = findViewById(R.id.btnShowYesNoAlertTop_demo);
         btnShowInputAlertTop_demo = findViewById(R.id.btnShowInputAlertTop_demo);
         pprFotos_demo = findViewById(R.id.pprFotos_demo);
+        addFoto = findViewById(R.id.addFoto);
     }
 
     private void initActions() {
@@ -128,6 +132,7 @@ public class Demo extends Parallax {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         pprFotos_demo.result(requestCode,resultCode,data);
+        addFoto.result(requestCode,resultCode,data);
     }
 }
 

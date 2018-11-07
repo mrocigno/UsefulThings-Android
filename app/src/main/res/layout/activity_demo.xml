@@ -9,6 +9,19 @@
     android:orientation="vertical"
     tools:context=".Demo">
 
+    <ImageView
+        android:id="@+id/imgmain"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <lib.rocigno.usefulthingslib.CustomViews.Views.ButtonAddPhoto
+        android:id="@+id/addFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:result_galery="3"
+        app:result_camera="4"
+        app:image_view="@id/imgmain"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

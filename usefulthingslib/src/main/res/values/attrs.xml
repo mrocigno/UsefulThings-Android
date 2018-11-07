@@ -8,4 +8,10 @@
         <attr name="validate_cpf" format="boolean"/>
         <attr name="min_length" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="ButtonAddPhoto">
+        <attr name="result_camera" format="integer"/>
+        <attr name="result_galery" format="integer"/>
+        <attr name="image_view" format="reference"/>
+    </declare-styleable>
 </resources>
